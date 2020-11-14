@@ -1,5 +1,6 @@
 :root{
-    --percentage: 0%
+    /* css变量 */
+    --percentage: 0%  
 }
 
 body {
@@ -29,9 +30,13 @@ h1 {
     rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 33.3%,
     rgba(255, 255, 255, 0) 66.7%, rgba(255, 255, 255, 0) 100%);
     background-size: 300% 100%;
-    background-position-x: calc(100% - var(--percentage));
-
-    background-clip: text;
+    /* 
+    一开始背景色在66.7-100之间，所以是全透的，看见的是黑色主页面背景。
+    改变背景起始位置position-x，实现背景色的一个线性渐变过渡。
+    */
+    background-position-x: calc(100% - var(--percentage));  
+    
+    background-clip: text;  /* 指定背景绘画区域 */
     -webkit-background-clip: text;
     color: transparent;
 
